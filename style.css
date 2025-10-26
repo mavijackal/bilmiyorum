@@ -1,0 +1,80 @@
+/* style.css içeriği */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #343a40;
+}
+
+.accordion {
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.1em;
+    transition: 0.4s;
+    border-bottom: 1px solid #ddd;
+    margin-top: 5px; 
+    border-radius: 4px;
+}
+
+.accordion:hover {
+    background-color: #f8f9fa;
+}
+
+.active {
+    background-color: #007bff; 
+    color: white;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.3s ease-out; 
+    border-left: 5px solid #007bff;
+    border-radius: 0 0 4px 4px;
+}
+
+.content-wrapper {
+    display: flex; 
+    flex-direction: row; 
+    padding: 15px 0;
+    gap: 20px; 
+    align-items: flex-start; 
+}
+
+.content-wrapper img {
+    width: 300px; 
+    max-width: 40%; 
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0; 
+}
+
+/* MOBİL UYUMLULUK */
+@media (max-width: 600px) {
+    .content-wrapper {
+        flex-direction: column; 
+        text-align: left;
+        align-items: center; 
+    }
+    
+    .content-wrapper img {
+        width: 100%;
+        max-width: 90%; 
+        margin-bottom: 15px;
+    }
+}
